@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telar de Patitas — ¡Más que guau! ¡Wow! | Bogotá, Colombia</title>
+  
+  <!-- Google Fonts: Fredoka & Quicksand -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandPink: '#F8C8D2',
+            brandPinkSoft: '#FDF0F3',
+            brandNude: '#E8D3C5',
+            brandCream: '#FAF5F0',
+            brandSalmon: '#E29587',
+            brandRed: '#D96B6B',
+            brandBrown: '#8C6251',
+            brandDarkBrown: '#5C3D31',
+          },
+          fontFamily: {
+            fredoka: ['Fredoka', 'sans-serif'],
+            quicksand: ['Quicksand', 'sans-serif'],
+          },
+          boxShadow: {
+            'paw': '0 12px 30px rgba(140, 98, 81, 0.08)',
+            'paw-hover': '0 20px 40px rgba(140, 98, 81, 0.16)',
+            'glow-salmon': '0 0 25px rgba(226, 149, 135, 0.45)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Estilos base y animaciones temáticas */
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background-color: #FAF5F0;
+      color: #5C3D31;
+      background-image: 
+        radial-gradient(circle at 12% 18%, rgba(248, 200, 210, 0.55) 0%, transparent 35%),
+        radial-gradient(circle at 88% 70%, rgba(226, 149, 135, 0.3) 0%, transparent 42%),
+        radial-gradient(circle at 50% 50%, rgba(232, 211, 197, 0.35) 0%, transparent 60%),
+        url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm-12 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6 4c1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3 1.3 3 3 3z' fill='%238C6251' fill-opacity='0.04'/%3E%3C/svg%3E");
+      background-attachment: fixed;
+    }
+
+    /* Animaciones */
+    @keyframes wigglePaw {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      25% { transform: translateY(-4px) rotate(-12deg); }
+      75% { transform: translateY(-4px) rotate(12deg); }
+    }
+    .anim-paw {
+      display: inline-block;
+      animation: wigglePaw 3s ease-in-out infinite;
+    }
+
+    @keyframes pulseHeart {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.18); }
+    }
+    .anim-heart {
+      display: inline-block;
+      animation: pulseHeart 2.2s infinite;
+    }
+
+    @keyframes floatDecor {
+      0% { transform: translateY(0px) rotate(0deg); }
+      100% { transform: translateY(-20px) rotate(10deg); }
+    }
+    .bg-float-icon {
+      position: absolute;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.16;
+      color: #8C6251;
+      animation: floatDecor 7s ease-in-out infinite alternate;
+    }
+  </style>
+</head>
+<body class="relative overflow-x-hidden text-brandDarkBrown antialiased">
+
+  <!-- Iconos de fondo decorativos -->
+  <i class="fa-solid fa-paw bg-float-icon text-7xl top-16 left-6"></i>
+  <i class="fa-solid fa-heart bg-float-icon text-6xl top-96 right-10" style="animation-delay: 1.5s;"></i>
+  <i class="fa-solid fa-bone bg-float-icon text-6xl top-[45%] left-4" style="animation-delay: 3s;"></i>
+  <i class="fa-solid fa-shield-dog bg-float-icon text-8xl top-[75%] right-6" style="animation-delay: 2s;"></i>
+
+  <!-- ========================================================= -->
+  <!-- 1. HEADER & NAVEGACIÓN -->
+  <!-- ========================================================= -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-md border-b-2 border-brandPink shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- LOGO -->
+      <a href="#inicio" class="flex items-center gap-3.5 group">
+        <div class="w-12 h-12 rounded-2xl bg-brandPinkSoft border-2 border-brandPink flex items-center justify-center text-xl text-brandSalmon group-hover:scale-105 group-hover:bg-brandPink transition-all duration-300 shadow-sm">
+          <i class="fa-solid fa-paw anim-paw text-brandBrown"></i>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-fredoka font-bold text-xl text-brandDarkBrown tracking-tight leading-none group-hover:text-brandSalmon transition-colors">
+            Telar de Patitas
+          </span>
+          <span class="font-fredoka font-medium text-xs text-brandSalmon tracking-wide mt-1">
+            ¡Más que guau! ¡Wow!
+          </span>
+        </div>
+      </a>
+
+      <!-- MENU DESKTOP -->
+      <nav class="hidden xl:flex items-center gap-7 text-sm font-semibold text-brandDarkBrown">
+        <a href="#inicio" class="hover:text-brandSalmon transition-colors">Inicio</a>
+        <a href="#nosotros" class="hover:text-brandSalmon transition-colors">Nosotros</a>
+        <a href="#esquema" class="hover:text-brandSalmon transition-colors">Cómo Trabajamos</a>
+        <a href="#paquetes" class="hover:text-brandSalmon transition-colors">Paquetes</a>
+        <a href="#adicionales" class="hover:text-brandSalmon transition-colors">Complementos</a>
+        <a href="#bienestar" class="hover:text-brandSalmon transition-colors">Bienestar Animal</a>
+        <a href="#navidad" class="hover:text-brandSalmon transition-colors flex items-center gap-1.5 text-brandRed">
+          <i class="fa-solid fa-gift"></i> Próximo Evento
+        </a>
+      </nav>
+
+      <!-- BOTÓN CTA & BOTÓN MÓVIL -->
+      <div class="flex items-center gap-3">
+        <a href="#contacto" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-brandSalmon to-brandRed text-white font-fredoka font-medium text-sm shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200">
+          <i class="fa-solid fa-file-invoice-dollar"></i> Cotizar Evento
+        </a>
+
+        <!-- Botón Móvil -->
+        <button id="mobileMenuBtn" aria-label="Abrir menú" class="xl:hidden p-2.5 rounded-xl bg-brandPinkSoft border border-brandPink text-brandDarkBrown hover:bg-brandPink transition-colors">
+          <i class="fa-solid fa-bars text-xl" id="menuIcon"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- MENÚ MÓVIL DESPLEGABLE -->
+    <div id="mobileMenu" class="hidden xl:hidden bg-white/98 border-b-2 border-brandPink px-6 py-6 space-y-4 shadow-xl">
+      <div class="flex flex-col space-y-3 font-semibold text-base text-brandDarkBrown">
+        <a href="#inicio" class="mobile-nav-link hover:text-brandSalmon transition-colors py-1">Inicio</a>
+        <a href="#nosotros" class="mobile-nav-link hover:text-brandSalmon transition-colors py-1">Sobre Nosotros</a>
+        <a href="#esquema" class="mobile-nav-link hover:text-brandSalmon transition-colors py-1">Cómo Trabajamos con Fundaciones</a>
+        <a href="#paquetes" class="mobile-nav-link hover:text-brandSalmon transition-colors py-1">Paquetes Oficiales</a>
+        <a href="#adicionales" class="mobile-nav-link hover:text-brandSalmon transition-colors py-1">Servicios Adicionales</a>
+        <a href="#bienestar" class="mobile-nav-link hover:text-brandSalmon transition-colors py-1">Protocolo de Bienestar</a>
+        <a href="#navidad" class="mobile-nav-link text-brandRed hover:text-brandSalmon transition-colors py-1 flex items-center gap-2">
+          <i class="fa-solid fa-gift"></i> Próximo Evento: Navidad de Huellitas
+        </a>
+        <a href="#contacto" class="mobile-nav-link inline-flex items-center justify-center gap-2 w-full py-3 mt-2 rounded-2xl bg-gradient-to-r from-brandSalmon to-brandRed text-white font-fredoka font-semibold shadow-md">
+          <i class="fa-solid fa-paper-plane"></i> Solicitar una Cotización
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================= -->
+  <!-- 2. SECCIÓN: INICIO (HERO) -->
+  <!-- ========================================================= -->
+  <section id="inicio" class="pt-32 pb-16 md:pt-40 md:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      
+      <!-- Contenido textual Hero -->
+      <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-brandPink shadow-sm text-xs sm:text-sm font-bold text-brandBrown">
+          <i class="fa-solid fa-location-dot text-brandSalmon"></i> Bogotá, Colombia 
+          <span class="text-brandPink">|</span>
+          <i class="fa-solid fa-heart text-brandRed anim-heart"></i> Especialistas en Refugios y Fundaciones
+        </div>
+
+        <h1 class="font-fredoka text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-brandDarkBrown leading-[1.15]">
+          ¡Más que guau! <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandSalmon to-brandRed">¡Wow!</span>
+        </h1>
+
+        <p class="font-fredoka text-xl sm:text-2xl font-semibold text-brandBrown leading-snug">
+          Creamos y organizamos eventos temáticos especializados para refugios, fundaciones caninas y sus comunidades.
+        </p>
+
+        <p class="text-base sm:text-lg text-[#6B5045] leading-relaxed max-w-2xl mx-auto lg:mx-0">
+          En <strong class="text-brandDarkBrown">Telar de Patitas</strong> visibilizamos la labor de las organizaciones de rescate animal y promovemos la adopción responsable mediante la planeación, producción y montaje de ferias, desfiles y festivales caninos seguros e inolvidables.
+        </p>
+
+        <!-- Botones de Acción (CTA) -->
+        <div class="pt-3 flex flex-wrap gap-3.5 justify-center lg:justify-start">
+          <a href="#paquetes" class="px-6 py-3.5 rounded-full bg-gradient-to-r from-brandSalmon to-brandRed text-white font-fredoka font-semibold text-sm sm:text-base shadow-paw hover:shadow-paw-hover hover:-translate-y-0.5 transition-all duration-200 flex items-center gap-2">
+            <i class="fa-solid fa-boxes-packing"></i> Conoce nuestros Paquetes
+          </a>
+
+          <a href="#navidad" class="px-6 py-3.5 rounded-full bg-brandPinkSoft border-2 border-brandPink text-brandDarkBrown font-fredoka font-semibold text-sm sm:text-base hover:bg-brandPink hover:text-brandRed hover:-translate-y-0.5 transition-all duration-200 flex items-center gap-2">
+            <i class="fa-solid fa-tree text-brandRed"></i> Próximo Evento: Navidad de Huellitas
+          </a>
+
+          <a href="#contacto" class="px-6 py-3.5 rounded-full bg-white border-2 border-brandNude text-brandDarkBrown font-fredoka font-semibold text-sm sm:text-base hover:border-brandSalmon hover:text-brandSalmon hover:-translate-y-0.5 transition-all duration-200 flex items-center gap-2">
+            <i class="fa-solid fa-comments-dollar"></i> Solicita una Cotización
+          </a>
+        </div>
+
+        <!-- Métricas rápidas / Confianza -->
+        <div class="pt-6 grid grid-cols-3 gap-4 border-t border-brandNude/60 max-w-lg mx-auto lg:mx-0">
+          <div>
+            <span class="block font-fredoka font-bold text-2xl sm:text-3xl text-brandSalmon">100%</span>
+            <span class="text-xs sm:text-sm font-semibold text-brandBrown">Bienestar Canino</span>
+          </div>
+          <div>
+            <span class="block font-fredoka font-bold text-2xl sm:text-3xl text-brandDarkBrown">3</span>
+            <span class="text-xs sm:text-sm font-semibold text-brandBrown">Paquetes Oficiales</span>
+          </div>
+          <div>
+            <span class="block font-fredoka font-bold text-2xl sm:text-3xl text-brandSalmon">Bogotá</span>
+            <span class="text-xs sm:text-sm font-semibold text-brandBrown">Cobertura Urbana</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Imagen & Frame con badge flotante -->
+      <div class="lg:col-span-5 relative">
+        <div class="relative mx-auto max-w-md lg:max-w-none">
+          
+          <div class="relative rounded-[38px] p-3 bg-white border-4 border-white shadow-paw-hover">
+            <img 
+              src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=900&q=80" 
+              alt="Perros felices rescatados en eventos de Telar de Patitas" 
+              class="w-full h-[430px] sm:h-[480px] object-cover rounded-[30px]"
+              onerror="this.src='https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=900'"
+            />
+          </div>
+
+          <!-- Card flotante de Impacto Social -->
+          <div class="absolute -bottom-6 -left-4 sm:-left-6 bg-white/95 backdrop-blur-md border-2 border-brandPink rounded-2xl p-4 shadow-xl flex items-center gap-3.5 max-w-xs">
+            <div class="w-12 h-12 rounded-xl bg-brandPinkSoft flex items-center justify-center text-brandSalmon text-2xl shrink-0">
+              <i class="fa-solid fa-hands-holding-circle"></i>
+            </div>
+            <div>
+              <p class="font-fredoka font-bold text-sm text-brandDarkBrown">Alianza con Refugios</p>
+              <p class="text-xs text-brandBrown font-medium">Fomentamos la adopción y el respeto incondicional.</p>
+            </div>
+          </div>
+
+          <!-- Mini badge flotante -->
+          <div class="absolute -top-4 -right-2 bg-gradient-to-r from-brandSalmon to-brandRed text-white px-4 py-2 rounded-full font-fredoka text-xs font-bold shadow-md flex items-center gap-1.5">
+            <i class="fa-solid fa-certificate"></i> Eventos Seguros
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 3. SECCIÓN: SOBRE NOSOTROS -->
+  <!-- ========================================================= -->
+  <section id="nosotros" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative z-10">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="inline-block text-xs uppercase tracking-widest font-bold text-brandSalmon bg-brandPinkSoft px-3 py-1 rounded-full border border-brandPink mb-3">
+        Conócenos
+      </span>
+      <h2 class="font-fredoka text-3xl sm:text-4xl font-bold text-brandDarkBrown">Sobre Nosotros</h2>
+      <div class="w-16 h-1 bg-brandSalmon rounded-full mx-auto my-3"></div>
+      <p class="text-base sm:text-lg text-[#6B5045]">
+        En Telar de Patitas unimos creatividad, logística profesional y amor genuino para transformar la realidad de los perros en resguardo.
+      </p>
+    </div>
+
+    <!-- Grid: Quiénes Somos, Misión, Visión -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- ¿Quiénes Somos? -->
+      <div class="bg-white/95 rounded-[32px] p-8 border border-brandNude shadow-paw hover:shadow-paw-hover hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between">
+        <div>
+          <div class="w-14 h-14 rounded-2xl bg-brandPinkSoft border border-brandPink flex items-center justify-center text-brandSalmon text-2xl mb-6">
+            <i class="fa-solid fa-users-viewfinder"></i>
+          </div>
+          <h3 class="font-fredoka text-2xl font-bold text-brandDarkBrown mb-3">¿Quiénes Somos?</h3>
+          <p class="text-[#6B5045] leading-relaxed text-sm sm:text-base">
+            Somos una empresa especializada en organizar <strong>eventos temáticos, ferias y pasarelas caninas dirigidos exclusivamente a refugios y fundaciones</strong>. Diseñamos experiencias que visibilizan su labor, promueven la adopción responsable y apoyan el bienestar integral de los canes a su cargo.
+          </p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-brandPinkSoft text-xs font-semibold text-brandSalmon flex items-center gap-1.5">
+          <i class="fa-solid fa-check-circle"></i> Enfoque 100% Social Canino
+        </div>
+      </div>
+
+      <!-- Misión -->
+      <div class="bg-white/95 rounded-[32px] p-8 border border-brandNude shadow-paw hover:shadow-paw-hover hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between">
+        <div>
+          <div class="w-14 h-14 rounded-2xl bg-brandPinkSoft border border-brandPink flex items-center justify-center text-brandRed text-2xl mb-6">
+            <i class="fa-solid fa-bullseye"></i>
+          </div>
+          <h3 class="font-fredoka text-2xl font-bold text-brandDarkBrown mb-3">Nuestra Misión</h3>
+          <p class="text-[#6B5045] leading-relaxed text-sm sm:text-base">
+            Organizar eventos y actividades para refugios y fundaciones caninas que promuevan el <strong>bienestar de los perros</strong> y su <strong>adopción responsable</strong>, creando entornos estimulantes y seguros para toda la comunidad interesada en brindarles un nuevo hogar.
+          </p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-brandPinkSoft text-xs font-semibold text-brandSalmon flex items-center gap-1.5">
+          <i class="fa-solid fa-heart"></i> Adopción y Conciencia
+        </div>
+      </div>
+
+      <!-- Visión (Horizonte Estratégico) -->
+      <div class="bg-white/95 rounded-[32px] p-8 border border-brandNude shadow-paw hover:shadow-paw-hover hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between">
+        <div>
+          <div class="w-14 h-14 rounded-2xl bg-brandPinkSoft border border-brandPink flex items-center justify-center text-brandBrown text-2xl mb-6">
+            <i class="fa-solid fa-compass"></i>
+          </div>
+          <h3 class="font-fredoka text-2xl font-bold text-brandDarkBrown mb-3">Visión Estratégica</h3>
+          <p class="text-[#6B5045] leading-relaxed text-sm sm:text-base">
+            Ser una <strong>empresa referente en Colombia</strong> por la organización de eventos especializados para refugios y fundaciones caninas, fortaleciendo la adopción responsable, el bienestar y el cuidado de los perros en resguardo en cada rincón del país.
+          </p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-brandPinkSoft text-xs font-semibold text-brandSalmon flex items-center gap-1.5">
+          <i class="fa-solid fa-flag"></i> Liderazgo en Colombia
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Valores Corporativos -->
+    <div class="mt-12 bg-white/90 rounded-[32px] p-8 sm:p-10 border border-brandNude shadow-paw">
+      <div class="flex flex-col md:flex-row items-center gap-6 justify-between mb-8">
+        <div>
+          <h4 class="font-fredoka text-2xl font-bold text-brandDarkBrown flex items-center gap-2">
+            <i class="fa-solid fa-gem text-brandSalmon"></i> Nuestros Valores Corporativos
+          </h4>
+          <p class="text-sm sm:text-base text-brandBrown mt-1">Los pilares éticos que guían cada montaje, producción y vínculo comunitario.</p>
+        </div>
+        <span class="text-xs font-bold text-brandSalmon bg-brandPinkSoft px-4 py-1.5 rounded-full border border-brandPink">
+          Cultura Telar de Patitas
+        </span>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-3 sm:gap-4">
+        <div class="p-4 rounded-2xl bg-brandCream border border-brandNude text-center hover:border-brandSalmon hover:bg-white transition-all">
+          <span class="text-2xl block mb-2">❤️</span>
+          <span class="font-fredoka font-semibold text-xs sm:text-sm text-brandDarkBrown">Amor y Respeto</span>
+        </div>
+        <div class="p-4 rounded-2xl bg-brandCream border border-brandNude text-center hover:border-brandSalmon hover:bg-white transition-all">
+          <span class="text-2xl block mb-2">🤝</span>
+          <span class="font-fredoka font-semibold text-xs sm:text-sm text-brandDarkBrown">Responsabilidad</span>
+        </div>
+        <div class="p-4 rounded-2xl bg-brandCream border border-brandNude text-center hover:border-brandSalmon hover:bg-white transition-all">
+          <span class="text-2xl block mb-2">✨</span>
+          <span class="font-fredoka font-semibold text-xs sm:text-sm text-brandDarkBrown">Creatividad</span>
+        </div>
+        <div class="p-4 rounded-2xl bg-brandCream border border-brandNude text-center hover:border-brandSalmon hover:bg-white transition-all">
+          <span class="text-2xl block mb-2">🎯</span>
+          <span class="font-fredoka font-semibold text-xs sm:text-sm text-brandDarkBrown">Compromiso</span>
+        </div>
+        <div class="p-4 rounded-2xl bg-brandCream border border-brandNude text-center hover:border-brandSalmon hover:bg-white transition-all">
+          <span class="text-2xl block mb-2">🐾</span>
+          <span class="font-fredoka font-semibold text-xs sm:text-sm text-brandDarkBrown">Trabajo en Equipo</span>
+        </div>
+        <div class="p-4 rounded-2xl bg-brandCream border border-brandNude text-center hover:border-brandSalmon hover:bg-white transition-all">
+          <span class="text-2xl block mb-2">🤗</span>
+          <span class="font-fredoka font-semibold text-xs sm:text-sm text-brandDarkBrown">Solidaridad</span>
+        </div>
+        <div class="col-span-2 sm:col-span-3 lg:col-span-1 p-4 rounded-2xl bg-brandCream border border-brandNude text-center hover:border-brandSalmon hover:bg-white transition-all">
+          <span class="text-2xl block mb-2">🛡️</span>
+          <span class="font-fredoka font-semibold text-xs sm:text-sm text-brandDarkBrown">Bienestar Animal</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 4. BLOQUE ADICIONAL: ¿CÓMO TRABAJAMOS CON LAS FUNDACIONES? -->
+  <!-- ========================================================= -->
+  <section id="esquema" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative z-10">
+    <div class="bg-gradient-to-br from-white via-brandPinkSoft/40 to-brandCream rounded-[40px] p-8 sm:p-12 lg:p-16 border-2 border-brandPink shadow-paw relative overflow-hidden">
+      
+      <!-- Fondo decorativo -->
+      <div class="absolute -right-10 -bottom-10 opacity-10 text-9xl text-brandDarkBrown pointer-events-none">
+        <i class="fa-solid fa-handshake-simple"></i>
+      </div>
+
+      <div class="max-w-3xl mb-12">
+        <span class="inline-block text-xs uppercase tracking-widest font-bold text-brandSalmon bg-white px-3 py-1 rounded-full border border-brandPink mb-3">
+          Esquema de Cooperación
+        </span>
+        <h2 class="font-fredoka text-3xl sm:text-4xl font-bold text-brandDarkBrown">¿Cómo trabajamos con las Fundaciones?</h2>
+        <div class="w-16 h-1 bg-brandSalmon rounded-full my-3"></div>
+        <p class="text-base sm:text-lg text-[#6B5045]">
+          Brindamos asesoría, cotización clara con <strong>50% de anticipo para reserva y organización, y 50% previo a la ejecución</strong>, garantizando montajes profesionales, seguros y con total transparencia presupuestal.
+        </p>
+      </div>
+
+      <!-- Pasos interactivos / Esquema -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
+        
+        <!-- Paso 1 -->
+        <div class="bg-white rounded-3xl p-6 border border-brandNude shadow-sm hover:shadow-md transition-all relative group">
+          <div class="w-10 h-10 rounded-full bg-brandSalmon text-white font-fredoka font-bold flex items-center justify-center text-lg mb-4">
+            1
+          </div>
+          <h4 class="font-fredoka font-bold text-lg text-brandDarkBrown mb-2">Asesoría Inicial</h4>
+          <p class="text-xs sm:text-sm text-[#6B5045] leading-relaxed">
+            Evaluamos las necesidades del refugio, su población de canes candidatos y definimos el objetivo (adopción, recaudación o visibilidad).
+          </p>
+          <div class="mt-4 text-xs font-bold text-brandSalmon flex items-center gap-1">
+            <i class="fa-solid fa-comments"></i> Diagnóstico a la medida
+          </div>
+        </div>
+
+        <!-- Paso 2 -->
+        <div class="bg-white rounded-3xl p-6 border border-brandNude shadow-sm hover:shadow-md transition-all relative group">
+          <div class="w-10 h-10 rounded-full bg-brandSalmon text-white font-fredoka font-bold flex items-center justify-center text-lg mb-4">
+            2
+          </div>
+          <h4 class="font-fredoka font-bold text-lg text-brandDarkBrown mb-2">Cotización Clara</h4>
+          <p class="text-xs sm:text-sm text-[#6B5045] leading-relaxed">
+            Presentamos un desglose transparente de costos de producción, carpas, sonido y logística sin letras pequeñas.
+          </p>
+          <div class="mt-4 text-xs font-bold text-brandSalmon flex items-center gap-1">
+            <i class="fa-solid fa-receipt"></i> Cero sobrecostos
+          </div>
+        </div>
+
+        <!-- Paso 3 -->
+        <div class="bg-white rounded-3xl p-6 border-2 border-brandPink shadow-md hover:shadow-lg transition-all relative group bg-brandPinkSoft/30">
+          <div class="w-10 h-10 rounded-full bg-brandRed text-white font-fredoka font-bold flex items-center justify-center text-lg mb-4">
+            3
+          </div>
+          <h4 class="font-fredoka font-bold text-lg text-brandDarkBrown mb-2">Reserva (50% Anticipo)</h4>
+          <p class="text-xs sm:text-sm text-[#6B5045] leading-relaxed">
+            Con el <strong>50% de anticipo</strong> bloqueamos la fecha, se reservan permisos, insumos, escenografía y montaje integral.
+          </p>
+          <div class="mt-4 text-xs font-bold text-brandRed flex items-center gap-1">
+            <i class="fa-solid fa-lock"></i> Fecha & Logística aseguradas
+          </div>
+        </div>
+
+        <!-- Paso 4 -->
+        <div class="bg-white rounded-3xl p-6 border border-brandNude shadow-sm hover:shadow-md transition-all relative group">
+          <div class="w-10 h-10 rounded-full bg-brandBrown text-white font-fredoka font-bold flex items-center justify-center text-lg mb-4">
+            4
+          </div>
+          <h4 class="font-fredoka font-bold text-lg text-brandDarkBrown mb-2">Ejecución (50% Saldo)</h4>
+          <p class="text-xs sm:text-sm text-[#6B5045] leading-relaxed">
+            El <strong>50% restante previo a la ejecución</strong> garantiza el despliegue del personal técnico, sonido y bienestar durante todo el festival.
+          </p>
+          <div class="mt-4 text-xs font-bold text-brandBrown flex items-center gap-1">
+            <i class="fa-solid fa-star"></i> Montaje profesional y seguro
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Banner de Garantía Transparente -->
+      <div class="mt-10 p-5 rounded-2xl bg-white/80 border border-brandPink flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <i class="fa-solid fa-shield-halved text-brandSalmon text-3xl"></i>
+          <div>
+            <h5 class="font-fredoka font-bold text-sm sm:text-base text-brandDarkBrown">Garantía de Confianza Institucional</h5>
+            <p class="text-xs text-brandBrown">Firmamos contrato de prestación de servicios y entregamos actas de entrega para fundaciones formalizadas.</p>
+          </div>
+        </div>
+        <a href="#contacto" class="shrink-0 px-5 py-2.5 rounded-full bg-brandDarkBrown text-white text-xs sm:text-sm font-fredoka font-bold hover:bg-brandBrown transition-colors">
+          Coordinar Reunión Virtual
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 5. SECCIÓN: NUESTROS PAQUETES Y SERVICIOS OFICIALES -->
+  <!-- ========================================================= -->
+  <section id="paquetes" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative z-10">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="inline-block text-xs uppercase tracking-widest font-bold text-brandSalmon bg-brandPinkSoft px-3 py-1 rounded-full border border-brandPink mb-3">
+        Formatos Comerciales Oficiales
+      </span>
+      <h2 class="font-fredoka text-3xl sm:text-4xl font-bold text-brandDarkBrown">Nuestros Paquetes Oficiales de Eventos</h2>
+      <div class="w-16 h-1 bg-brandSalmon rounded-full mx-auto my-3"></div>
+      <p class="text-base sm:text-lg text-[#6B5045]">
+        Tres formatos diseñados para adecuarse al aforo, objetivos y magnitud de tu fundación o feria canina.
+      </p>
+    </div>
+
+    <!-- Grid de los 3 Paquetes Oficiales -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+      
+      <!-- PAQUETE 1: Huellas con Propósito -->
+      <div class="bg-white rounded-[36px] p-8 border-2 border-brandNude shadow-paw hover:shadow-paw-hover hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between relative">
+        <div>
+          <div class="flex justify-between items-center mb-4">
+            <span class="px-3.5 py-1 rounded-full text-xs font-fredoka font-bold bg-brandCream text-brandBrown border border-brandNude">
+              Feria Social
+            </span>
+            <span class="text-xs font-bold text-brandBrown flex items-center gap-1">
+              <i class="fa-regular fa-clock"></i> 5 Horas
+            </span>
+          </div>
+
+          <h3 class="font-fredoka text-2xl font-bold text-brandDarkBrown mb-2">Huellas con Propósito</h3>
+          <p class="text-xs sm:text-sm font-semibold text-brandSalmon mb-4">Feria Social y de Bienestar Animal</p>
+          <p class="text-xs sm:text-sm text-[#6B5045] leading-relaxed mb-6">
+            Una feria diseñada para visibilizar la labor de los refugios, concientizar a los asistentes y promover activamente la adopción responsable de canes rescatados.
+          </p>
+
+          <!-- Referencia de capacidad -->
+          <div class="p-3.5 rounded-2xl bg-brandPinkSoft/60 border border-brandPink mb-6 flex items-center justify-around text-center">
+            <div>
+              <span class="block font-fredoka font-bold text-lg text-brandDarkBrown">100</span>
+              <span class="text-[11px] font-semibold text-brandBrown">Personas</span>
+            </div>
+            <div class="h-6 w-px bg-brandPink"></div>
+            <div>
+              <span class="block font-fredoka font-bold text-lg text-brandSalmon">30</span>
+              <span class="text-[11px] font-semibold text-brandBrown">Perros</span>
+            </div>
+            <div class="h-6 w-px bg-brandPink"></div>
+            <div>
+              <span class="block font-fredoka font-bold text-lg text-brandDarkBrown">5 hrs</span>
+              <span class="text-[11px] font-semibold text-brandBrown">Duración</span>
+            </div>
+          </div>
+
+          <!-- Inclusiones -->
+          <h4 class="font-fredoka font-bold text-xs uppercase tracking-wider text-brandDarkBrown mb-3">¿Qué incluye este paquete?</h4>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-[#6B5045] mb-8">
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-circle-check text-brandSalmon mt-1 shrink-0"></i>
+              <span>Montaje general con <strong>carpas, mesas y sillas</strong> ergonómicas.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-circle-check text-brandSalmon mt-1 shrink-0"></i>
+              <span>Stands acondicionados para <strong>fundaciones invitadas y veterinarias</strong>.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-circle-check text-brandSalmon mt-1 shrink-0"></i>
+              <span><strong>Zona de adopción responsable</strong> señalizada y controlada.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-circle-check text-brandSalmon mt-1 shrink-0"></i>
+              <span>Charlas pedagógicas sobre <strong>cuidado y tenencia animal</strong>.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-circle-check text-brandSalmon mt-1 shrink-0"></i>
+              <span>Estaciones de <strong>hidratación constante</strong> con agua limpia.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-circle-check text-brandSalmon mt-1 shrink-0"></i>
+              <span>Zona de descanso con <strong>sombra adecuada</strong> para los peludos.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-circle-check text-brandSalmon mt-1 shrink-0"></i>
+              <span><strong>Sonido básico</strong> ambiental y <strong>personal logístico de apoyo</strong>.</span>
+            </li>
+          </ul>
+        </div>
+
+        <button onclick="seleccionarPaquete('Huellas con Propósito')" class="w-full py-3.5 rounded-full bg-brandPinkSoft border-2 border-brandPink text-brandDarkBrown font-fredoka font-bold text-sm hover:bg-brandSalmon hover:text-white hover:border-brandSalmon transition-all duration-200 flex items-center justify-center gap-2">
+          <i class="fa-solid fa-calendar-check"></i> Cotizar Huellas con Propósito
+        </button>
+      </div>
+
+      <!-- PAQUETE 2: Pasarela de Huellitas (DESTACADO) -->
+      <div class="bg-white rounded-[36px] p-8 border-3 border-brandSalmon shadow-paw-hover hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between relative transform lg:-translate-y-2 ring-4 ring-brandPinkSoft">
+        
+        <!-- Badge popular -->
+        <div class="absolute -top-4 right-8 bg-gradient-to-r from-brandSalmon to-brandRed text-white px-4 py-1 rounded-full font-fredoka text-xs font-bold tracking-wide shadow-md">
+          ★ Más Solicitado
+        </div>
+
+        <div>
+          <div class="flex justify-between items-center mb-4">
+            <span class="px-3.5 py-1 rounded-full text-xs font-fredoka font-bold bg-brandPinkSoft text-brandRed border border-brandPink">
+              Desfile & Exhibición
+            </span>
+            <span class="text-xs font-bold text-brandBrown flex items-center gap-1">
+              <i class="fa-regular fa-clock"></i> 5 Horas
+            </span>
+          </div>
+
+          <h3 class="font-fredoka text-2xl font-bold text-brandDarkBrown mb-2">Pasarela de Huellitas</h3>
+          <p class="text-xs sm:text-sm font-semibold text-brandSalmon mb-4">Desfiles y Exhibiciones Caninas</p>
+          <p class="text-xs sm:text-sm text-[#6B5045] leading-relaxed mb-6">
+            Evento recreativo y de gran dinamismo con desfiles temáticos, pasarelas de exhibición y concursos de simpatía o destreza canina.
+          </p>
+
+          <!-- Referencia de capacidad -->
+          <div class="p-3.5 rounded-2xl bg-brandPinkSoft border border-brandSalmon mb-6 flex items-center justify-around text-center">
+            <div>
+              <span class="block font-fredoka font-bold text-lg text-brandDarkBrown">120</span>
+              <span class="text-[11px] font-semibold text-brandBrown">Personas</span>
+            </div>
+            <div class="h-6 w-px bg-brandSalmon"></div>
+            <div>
+              <span class="block font-fredoka font-bold text-lg text-brandSalmon">40</span>
+              <span class="text-[11px] font-semibold text-brandBrown">Perros</span>
+            </div>
+            <div class="h-6 w-px bg-brandSalmon"></div>
+            <div>
+              <span class="block font-fredoka font-bold text-lg text-brandDarkBrown">5 hrs</span>
+              <span class="text-[11px] font-semibold text-brandBrown">Duración</span>
+            </div>
+          </div>
+
+          <!-- Inclusiones -->
+          <h4 class="font-fredoka font-bold text-xs uppercase tracking-wider text-brandDarkBrown mb-3">¿Qué incluye este paquete?</h4>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-[#6B5045] mb-8">
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-circle-check text-brandSalmon mt-1 shrink-0"></i>
+              <span><strong>Montaje de pasarela exclusiva</strong> alfombrada y segura para perros.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-circle-check text-brandSalmon mt-1 shrink-0"></i>
+              <span><strong>Escenario principal</strong> con backdrop de marca institucional.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-circle-check text-brandSalmon mt-1 shrink-0"></i>
+              <span><strong>Decoración temática especial</strong> a lo largo de todo el recorrido.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-circle-check text-brandSalmon mt-1 shrink-0"></i>
+              <span>Zona organizada de <strong>inscripción y espera tranquila</strong>.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-circle-check text-brandSalmon mt-1 shrink-0"></i>
+              <span>Puntos de <strong>hidratación para participantes</strong> caninos.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-circle-check text-brandSalmon mt-1 shrink-0"></i>
+              <span>Espacio con mesa y confort para <strong>jurados calificadores</strong>.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-circle-check text-brandSalmon mt-1 shrink-0"></i>
+              <span><strong>Sonido amplificado, micrófonos inalámbricos</strong> y <strong>zona fotográfica</strong>.</span>
+            </li>
+          </ul>
+        </div>
+
+        <button onclick="seleccionarPaquete('Pasarela de Huellitas')" class="w-full py-3.5 rounded-full bg-gradient-to-r from-brandSalmon to-brandRed text-white font-fredoka font-bold text-sm shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center gap-2">
+          <i class="fa-solid fa-wand-magic-sparkles"></i> Cotizar Pasarela de Huellitas
+        </button>
+      </div>
+
+      <!-- PAQUETE 3: Gran Festival Patitas -->
+      <div class="bg-white rounded-[36px] p-8 border-2 border-brandNude shadow-paw hover:shadow-paw-hover hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between relative">
+        <div>
+          <div class="flex justify-between items-center mb-4">
+            <span class="px-3.5 py-1 rounded-full text-xs font-fredoka font-bold bg-brandCream text-brandBrown border border-brandNude">
+              Gran Formato
+            </span>
+            <span class="text-xs font-bold text-brandBrown flex items-center gap-1">
+              <i class="fa-regular fa-clock"></i> 7 Horas
+            </span>
+          </div>
+
+          <h3 class="font-fredoka text-2xl font-bold text-brandDarkBrown mb-2">Gran Festival Patitas</h3>
+          <p class="text-xs sm:text-sm font-semibold text-brandSalmon mb-4">Evento Integral de Gran Formato</p>
+          <p class="text-xs sm:text-sm text-[#6B5045] leading-relaxed mb-6">
+            La experiencia más completa y ambiciosa. Reúne en un solo día ferias comerciales, desfiles, zona de emprendimientos pet-friendly y bienestar total.
+          </p>
+
+          <!-- Referencia de capacidad -->
+          <div class="p-3.5 rounded-2xl bg-brandPinkSoft/60 border border-brandPink mb-6 flex items-center justify-around text-center">
+            <div>
+              <span class="block font-fredoka font-bold text-lg text-brandDarkBrown">250</span>
+              <span class="text-[11px] font-semibold text-brandBrown">Personas</span>
+            </div>
+            <div class="h-6 w-px bg-brandPink"></div>
+            <div>
+              <span class="block font-fredoka font-bold text-lg text-brandSalmon">80</span>
+              <span class="text-[11px] font-semibold text-brandBrown">Perros</span>
+            </div>
+            <div class="h-6 w-px bg-brandPink"></div>
+            <div>
+              <span class="block font-fredoka font-bold text-lg text-brandDarkBrown">7 hrs</span>
+              <span class="text-[11px] font-semibold text-brandBrown">Duración</span>
+            </div>
+          </div>
+
+          <!-- Inclusiones -->
+          <h4 class="font-fredoka font-bold text-xs uppercase tracking-wider text-brandDarkBrown mb-3">¿Qué incluye este paquete?</h4>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-[#6B5045] mb-8">
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-circle-check text-brandSalmon mt-1 shrink-0"></i>
+              <span><strong>Planeación integral y producción técnica</strong> llave en mano.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-circle-check text-brandSalmon mt-1 shrink-0"></i>
+              <span><strong>Escenario principal robusto</strong> con pasarela profesional ambientada.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-circle-check text-brandSalmon mt-1 shrink-0"></i>
+              <span>Batería de <strong>carpas y stands para marcas y emprendimientos</strong>.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-circle-check text-brandSalmon mt-1 shrink-0"></i>
+              <span><strong>Zona lúdica de juegos y concursos</strong> guiados con animador.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-circle-check text-brandSalmon mt-1 shrink-0"></i>
+              <span><strong>Área photobooth temática</strong> y protocolo formal de premiaciones.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-circle-check text-brandSalmon mt-1 shrink-0"></i>
+              <span><strong>Control estricto de aforo</strong>, seguridad y <strong>brigada de limpieza continua</strong>.</span>
+            </li>
+          </ul>
+        </div>
+
+        <button onclick="seleccionarPaquete('Gran Festival Patitas')" class="w-full py-3.5 rounded-full bg-brandPinkSoft border-2 border-brandPink text-brandDarkBrown font-fredoka font-bold text-sm hover:bg-brandSalmon hover:text-white hover:border-brandSalmon transition-all duration-200 flex items-center justify-center gap-2">
+          <i class="fa-solid fa-crown"></i> Cotizar Gran Festival Patitas
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 6. SECCIÓN: SERVICIOS ADICIONALES OPCIONALES (COMPLEMENTOS) -->
+  <!-- ========================================================= -->
+  <section id="adicionales" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative z-10">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="inline-block text-xs uppercase tracking-widest font-bold text-brandSalmon bg-brandPinkSoft px-3 py-1 rounded-full border border-brandPink mb-3">
+        Personalización al 100%
+      </span>
+      <h2 class="font-fredoka text-3xl sm:text-4xl font-bold text-brandDarkBrown">Servicios Adicionales Opcionales</h2>
+      <div class="w-16 h-1 bg-brandSalmon rounded-full mx-auto my-3"></div>
+      <p class="text-base sm:text-lg text-[#6B5045]">
+        Complementos que puedes añadir a cualquiera de los tres paquetes para elevar el impacto y la experiencia de tu evento.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <!-- Complemento 1 -->
+      <div class="bg-white/95 rounded-3xl p-6 border border-brandNude shadow-sm hover:shadow-paw transition-all duration-300 flex items-start gap-4">
+        <div class="w-12 h-12 rounded-2xl bg-brandPinkSoft flex items-center justify-center text-brandSalmon text-2xl shrink-0">
+          <i class="fa-solid fa-gift"></i>
+        </div>
+        <div>
+          <h4 class="font-fredoka font-bold text-lg text-brandDarkBrown mb-1">Kits para Mascotas</h4>
+          <p class="text-xs sm:text-sm text-[#6B5045]">Bolsita ecológica, juguete sensorial, pañuelo temático y accesorios de bienvenida personalizados.</p>
+        </div>
+      </div>
+
+      <!-- Complemento 2 -->
+      <div class="bg-white/95 rounded-3xl p-6 border border-brandNude shadow-sm hover:shadow-paw transition-all duration-300 flex items-start gap-4">
+        <div class="w-12 h-12 rounded-2xl bg-brandPinkSoft flex items-center justify-center text-brandSalmon text-2xl shrink-0">
+          <i class="fa-solid fa-camera-retro"></i>
+        </div>
+        <div>
+          <h4 class="font-fredoka font-bold text-lg text-brandDarkBrown mb-1">Fotografía y Photobooth</h4>
+          <p class="text-xs sm:text-sm text-[#6B5045]">Cobertura fotográfica profesional, backing decorativo y entrega digital en alta resolución para redes.</p>
+        </div>
+      </div>
+
+      <!-- Complemento 3 -->
+      <div class="bg-white/95 rounded-3xl p-6 border border-brandNude shadow-sm hover:shadow-paw transition-all duration-300 flex items-start gap-4">
+        <div class="w-12 h-12 rounded-2xl bg-brandPinkSoft flex items-center justify-center text-brandSalmon text-2xl shrink-0">
+          <i class="fa-solid fa-paw"></i>
+        </div>
+        <div>
+          <h4 class="font-fredoka font-bold text-lg text-brandDarkBrown mb-1">Circuitos Recreativos</h4>
+          <p class="text-xs sm:text-sm text-[#6B5045]">Túneles, juegos de obstáculos blandos y dinámicas guiadas por entrenadores positivos.</p>
+        </div>
+      </div>
+
+      <!-- Complemento 4 -->
+      <div class="bg-white/95 rounded-3xl p-6 border border-brandNude shadow-sm hover:shadow-paw transition-all duration-300 flex items-start gap-4">
+        <div class="w-12 h-12 rounded-2xl bg-brandPinkSoft flex items-center justify-center text-brandSalmon text-2xl shrink-0">
+          <i class="fa-solid fa-trophy"></i>
+        </div>
+        <div>
+          <h4 class="font-fredoka font-bold text-lg text-brandDarkBrown mb-1">Medallas y Premiaciones</h4>
+          <p class="text-xs sm:text-sm text-[#6B5045]">Trofeos ecológicos en madera, medallas grabadas y diplomas oficiales para los concursantes caninos.</p>
+        </div>
+      </div>
+
+      <!-- Complemento 5 -->
+      <div class="bg-white/95 rounded-3xl p-6 border border-brandNude shadow-sm hover:shadow-paw transition-all duration-300 flex items-start gap-4">
+        <div class="w-12 h-12 rounded-2xl bg-brandPinkSoft flex items-center justify-center text-brandSalmon text-2xl shrink-0">
+          <i class="fa-solid fa-tree"></i>
+        </div>
+        <div>
+          <h4 class="font-fredoka font-bold text-lg text-brandDarkBrown mb-1">Ambientación Temática</h4>
+          <p class="text-xs sm:text-sm text-[#6B5045]">Decoración estacional especial (Navidad, Halloween canino, pasarela de verano o gala nocturna).</p>
+        </div>
+      </div>
+
+      <!-- Complemento 6 -->
+      <div class="bg-white/95 rounded-3xl p-6 border border-brandNude shadow-sm hover:shadow-paw transition-all duration-300 flex items-start gap-4">
+        <div class="w-12 h-12 rounded-2xl bg-brandPinkSoft flex items-center justify-center text-brandSalmon text-2xl shrink-0">
+          <i class="fa-solid fa-user-doctor"></i>
+        </div>
+        <div>
+          <h4 class="font-fredoka font-bold text-lg text-brandDarkBrown mb-1">Apoyo Veterinario In Situ</h4>
+          <p class="text-xs sm:text-sm text-[#6B5045]">Acompañamiento presencial de médico veterinario y botiquín de primeros auxilios especializado.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 7. SECCIÓN: PROTOCOLO DE BIENESTAR ANIMAL -->
+  <!-- ========================================================= -->
+  <section id="bienestar" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative z-10">
+    <div class="bg-white rounded-[40px] p-8 sm:p-12 lg:p-16 border-2 border-brandPink shadow-paw">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="inline-block text-xs uppercase tracking-widest font-bold text-brandRed bg-brandPinkSoft px-3 py-1 rounded-full border border-brandPink mb-3">
+          Compromiso Innegociable
+        </span>
+        <h2 class="font-fredoka text-3xl sm:text-4xl font-bold text-brandDarkBrown">Protocolo de Bienestar Animal</h2>
+        <div class="w-16 h-1 bg-brandSalmon rounded-full mx-auto my-3"></div>
+        <p class="text-base sm:text-lg text-[#6B5045]">
+          En Telar de Patitas la diversión jamás está por encima de la integridad de los peludos. Cada evento sigue rigurosos lineamientos de etología y sanidad.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Punto 1 -->
+        <div class="p-6 rounded-3xl bg-brandCream border border-brandNude hover:border-brandSalmon hover:bg-white transition-all">
+          <div class="w-12 h-12 rounded-2xl bg-brandPinkSoft flex items-center justify-center text-brandSalmon text-xl mb-4">
+            <i class="fa-solid fa-bottle-water"></i>
+          </div>
+          <h4 class="font-fredoka font-bold text-lg text-brandDarkBrown mb-2">Hidratación Continua</h4>
+          <p class="text-xs sm:text-sm text-[#6B5045]">
+            Agua limpia y fresca disponible en múltiples estaciones de hidratación distribuidas estratégicamente en todo el recinto.
+          </p>
+        </div>
+
+        <!-- Punto 2 -->
+        <div class="p-6 rounded-3xl bg-brandCream border border-brandNude hover:border-brandSalmon hover:bg-white transition-all">
+          <div class="w-12 h-12 rounded-2xl bg-brandPinkSoft flex items-center justify-center text-brandSalmon text-xl mb-4">
+            <i class="fa-solid fa-umbrella-beach"></i>
+          </div>
+          <h4 class="font-fredoka font-bold text-lg text-brandDarkBrown mb-2">Sombra y Áreas Zen</h4>
+          <p class="text-xs sm:text-sm text-[#6B5045]">
+            Zonas de sombra natural o estructural y áreas de descanso silenciosas, debidamente aisladas de los altavoces y del ruido.
+          </p>
+        </div>
+
+        <!-- Punto 3 -->
+        <div class="p-6 rounded-3xl bg-brandCream border border-brandNude hover:border-brandSalmon hover:bg-white transition-all">
+          <div class="w-12 h-12 rounded-2xl bg-brandPinkSoft flex items-center justify-center text-brandSalmon text-xl mb-4">
+            <i class="fa-solid fa-users-slash"></i>
+          </div>
+          <h4 class="font-fredoka font-bold text-lg text-brandDarkBrown mb-2">Control Estricto de Aforo</h4>
+          <p class="text-xs sm:text-sm text-[#6B5045]">
+            Monitoreo en tiempo real de la capacidad para prevenir la sobreocupación, el hacinamiento y el estrés territorial entre los perros.
+          </p>
+        </div>
+
+        <!-- Punto 4 -->
+        <div class="p-6 rounded-3xl bg-brandCream border border-brandNude hover:border-brandSalmon hover:bg-white transition-all">
+          <div class="w-12 h-12 rounded-2xl bg-brandPinkSoft flex items-center justify-center text-brandRed text-xl mb-4">
+            <i class="fa-solid fa-hand-holding-heart"></i>
+          </div>
+          <h4 class="font-fredoka font-bold text-lg text-brandDarkBrown mb-2">Participación 100% Voluntaria</h4>
+          <p class="text-xs sm:text-sm text-[#6B5045]">
+            Nadie es forzado. Si un perro manifiesta incomodidad, jadeo por ansiedad o estrés, se retira inmediatamente del escenario.
+          </p>
+        </div>
+
+        <!-- Punto 5 -->
+        <div class="p-6 rounded-3xl bg-brandCream border border-brandNude hover:border-brandSalmon hover:bg-white transition-all">
+          <div class="w-12 h-12 rounded-2xl bg-brandPinkSoft flex items-center justify-center text-brandSalmon text-xl mb-4">
+            <i class="fa-solid fa-link"></i>
+          </div>
+          <h4 class="font-fredoka font-bold text-lg text-brandDarkBrown mb-2">Uso Obligatorio de Correa</h4>
+          <p class="text-xs sm:text-sm text-[#6B5045]">
+            Supervisión permanente y uso obligatorio de collar y correa en todo momento para garantizar una convivencia segura.
+          </p>
+        </div>
+
+        <!-- Punto 6 -->
+        <div class="p-6 rounded-3xl bg-brandCream border border-brandNude hover:border-brandSalmon hover:bg-white transition-all">
+          <div class="w-12 h-12 rounded-2xl bg-brandPinkSoft flex items-center justify-center text-brandSalmon text-xl mb-4">
+            <i class="fa-solid fa-broom"></i>
+          </div>
+          <h4 class="font-fredoka font-bold text-lg text-brandDarkBrown mb-2">Plan Activo de Limpieza</h4>
+          <p class="text-xs sm:text-sm text-[#6B5045]">
+            Plan constante de recolección de residuos, desinfección biosegura durante y al finalizar cada jornada en el espacio sede.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 8. SECCIÓN: PRÓXIMO EVENTO (NAVIDAD DE HUELLITAS) -->
+  <!-- ========================================================= -->
+  <section id="navidad" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative z-10">
+    <div class="bg-gradient-to-r from-brandRed via-[#C25858] to-brandDarkBrown text-white rounded-[40px] p-8 sm:p-12 lg:p-16 shadow-2xl relative overflow-hidden">
+      
+      <!-- Figuras navideñas decorativas -->
+      <div class="absolute -right-8 -bottom-8 opacity-15 text-white text-[180px] pointer-events-none">
+        <i class="fa-solid fa-gifts"></i>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+        <div class="lg:col-span-8 space-y-4">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-md text-xs font-bold uppercase tracking-wider">
+            <i class="fa-solid fa-sparkles"></i> Próxima Gran Convocatoria en Bogotá
+          </div>
+          <h3 class="font-fredoka text-3xl sm:text-5xl font-bold tracking-tight">
+            Navidad de Huellitas 🎄🐾
+          </h3>
+          <p class="text-brandPinkSoft text-base sm:text-lg leading-relaxed max-w-2xl">
+            Una edición especial para que los refugios caninos celebren las fiestas de fin de año, promuevan la adopción de sus rescatados y reciban donaciones de alimento, cobijitas y medicinas en un ambiente festivo y familiar.
+          </p>
+          <div class="flex flex-wrap gap-4 text-xs sm:text-sm font-semibold pt-2">
+            <span class="flex items-center gap-1.5 bg-black/20 px-3.5 py-1.5 rounded-full">
+              <i class="fa-solid fa-location-dot text-brandPink"></i> Bogotá, Colombia
+            </span>
+            <span class="flex items-center gap-1.5 bg-black/20 px-3.5 py-1.5 rounded-full">
+              <i class="fa-solid fa-calendar-day text-brandPink"></i> Temporada Navideña
+            </span>
+            <span class="flex items-center gap-1.5 bg-black/20 px-3.5 py-1.5 rounded-full">
+              <i class="fa-solid fa-heart text-brandPink"></i> Jornada de Donaciones & Adopción
+            </span>
+          </div>
+        </div>
+
+        <div class="lg:col-span-4 flex flex-col gap-3">
+          <button onclick="seleccionarPaquete('Navidad de Huellitas')" class="w-full py-4 rounded-full bg-white text-brandDarkBrown font-fredoka font-bold text-center shadow-lg hover:bg-brandPinkSoft hover:scale-105 transition-all duration-200">
+            <i class="fa-solid fa-envelope-open-text text-brandSalmon mr-2"></i> Unirme / Vincular mi Refugio
+          </button>
+          <p class="text-center text-xs text-brandPinkSoft">Cupos limitados para fundaciones aliadas.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 9. SECCIÓN: CONTACTO Y COTIZACIÓN + CANALES OFICIALES -->
+  <!-- ========================================================= -->
+  <section id="contacto" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative z-10">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="inline-block text-xs uppercase tracking-widest font-bold text-brandSalmon bg-brandPinkSoft px-3 py-1 rounded-full border border-brandPink mb-3">
+        Cotizaciones & Alianzas
+      </span>
+      <h2 class="font-fredoka text-3xl sm:text-4xl font-bold text-brandDarkBrown">Contacto y Canales Oficiales</h2>
+      <div class="w-16 h-1 bg-brandSalmon rounded-full mx-auto my-3"></div>
+      <p class="text-base sm:text-lg text-[#6B5045]">
+        ¿Listo para visibilizar a los peludos de tu fundación o patrocinar un evento de alto impacto? Escríbenos.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+      
+      <!-- Canales Oficiales e Información -->
+      <div class="lg:col-span-5 space-y-6">
+        
+        <div class="bg-white rounded-[32px] p-8 border border-brandNude shadow-paw">
+          <h3 class="font-fredoka text-2xl font-bold text-brandDarkBrown mb-4">Canales Digitales Oficiales</h3>
+          <p class="text-xs sm:text-sm text-[#6B5045] mb-6">
+            Conectamos fundaciones, padrinos y marcas conscientes a través de nuestras plataformas activas en Bogotá:
+          </p>
+
+          <div class="space-y-4 text-sm font-semibold text-brandDarkBrown">
+            
+            <a href="https://www.telardepatitas.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3.5 p-3 rounded-2xl bg-brandCream hover:bg-brandPinkSoft transition-colors">
+              <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-brandSalmon shadow-sm">
+                <i class="fa-solid fa-globe"></i>
+              </div>
+              <div>
+                <span class="block text-xs text-brandBrown">Página Web Oficial</span>
+                <span class="text-brandDarkBrown">www.telardepatitas.com</span>
+              </div>
+            </a>
+
+            <a href="https://instagram.com/telar_de_patitas" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3.5 p-3 rounded-2xl bg-brandCream hover:bg-brandPinkSoft transition-colors">
+              <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-brandSalmon shadow-sm">
+                <i class="fa-brands fa-instagram text-lg"></i>
+              </div>
+              <div>
+                <span class="block text-xs text-brandBrown">Instagram</span>
+                <span class="text-brandDarkBrown">@telar_de_patitas</span>
+              </div>
+            </a>
+
+            <a href="https://tiktok.com/@telar_de_patitas" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3.5 p-3 rounded-2xl bg-brandCream hover:bg-brandPinkSoft transition-colors">
+              <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-brandSalmon shadow-sm">
+                <i class="fa-brands fa-tiktok text-lg"></i>
+              </div>
+              <div>
+                <span class="block text-xs text-brandBrown">TikTok</span>
+                <span class="text-brandDarkBrown">@telar_de_patitas</span>
+              </div>
+            </a>
+
+            <a href="https://facebook.com/telardepatitas" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3.5 p-3 rounded-2xl bg-brandCream hover:bg-brandPinkSoft transition-colors">
+              <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-brandSalmon shadow-sm">
+                <i class="fa-brands fa-facebook text-lg"></i>
+              </div>
+              <div>
+                <span class="block text-xs text-brandBrown">Facebook</span>
+                <span class="text-brandDarkBrown">telardepatitas</span>
+              </div>
+            </a>
+
+            <div class="flex items-center gap-3.5 p-3 rounded-2xl bg-brandCream">
+              <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-brandSalmon shadow-sm">
+                <i class="fa-solid fa-map-pin text-lg"></i>
+              </div>
+              <div>
+                <span class="block text-xs text-brandBrown">Ubicación</span>
+                <span class="text-brandDarkBrown">Bogotá, Colombia</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Tip de asesoría rápida -->
+        <div class="bg-brandPinkSoft rounded-[32px] p-6 border-2 border-brandPink text-center">
+          <p class="font-fredoka font-bold text-brandDarkBrown text-base mb-1">¿Tienes preguntas sobre el anticipo?</p>
+          <p class="text-xs text-[#6B5045]">
+            El esquema del 50% de reserva y 50% previo al evento te garantiza control de flujo y congelación de precios en Bogotá.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Formulario de Cotización Oficial -->
+      <div class="lg:col-span-7">
+        <div class="bg-white rounded-[36px] p-8 sm:p-10 border border-brandNude shadow-paw">
+          <h3 class="font-fredoka text-2xl font-bold text-brandDarkBrown mb-2">Formulario de Cotización / Contacto</h3>
+          <p class="text-xs sm:text-sm text-[#6B5045] mb-6">Completa tus datos para enviarte una propuesta detallada a la medida.</p>
+
+          <form id="cotizacionForm" onsubmit="procesarEnvioCotizacion(event)" class="space-y-4">
+            
+            <!-- Tipo de Usuario (Radio buttons estilizados) -->
+            <div>
+              <label class="block text-xs font-bold text-brandDarkBrown uppercase tracking-wider mb-2">Tipo de Usuario *</label>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                
+                <label class="flex items-center gap-2 p-3 rounded-2xl border-2 border-brandNude cursor-pointer hover:border-brandSalmon has-[:checked]:border-brandSalmon has-[:checked]:bg-brandPinkSoft transition-all">
+                  <input type="radio" name="tipo_usuario" value="Fundación / Refugio" required class="accent-brandSalmon">
+                  <span class="text-xs sm:text-sm font-semibold text-brandDarkBrown">Fundación / Refugio</span>
+                </label>
+
+                <label class="flex items-center gap-2 p-3 rounded-2xl border-2 border-brandNude cursor-pointer hover:border-brandSalmon has-[:checked]:border-brandSalmon has-[:checked]:bg-brandPinkSoft transition-all">
+                  <input type="radio" name="tipo_usuario" value="Marca / Patrocinador" class="accent-brandSalmon">
+                  <span class="text-xs sm:text-sm font-semibold text-brandDarkBrown">Marca / Patrocinador</span>
+                </label>
+
+                <label class="flex items-center gap-2 p-3 rounded-2xl border-2 border-brandNude cursor-pointer hover:border-brandSalmon has-[:checked]:border-brandSalmon has-[:checked]:bg-brandPinkSoft transition-all">
+                  <input type="radio" name="tipo_usuario" value="Asistente / Tutor" class="accent-brandSalmon">
+                  <span class="text-xs sm:text-sm font-semibold text-brandDarkBrown">Asistente / Tutor</span>
+                </label>
+
+              </div>
+            </div>
+
+            <!-- Nombre y Correo -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="nombre" class="block text-xs font-bold text-brandDarkBrown uppercase tracking-wider mb-1">Nombre Completo *</label>
+                <input type="text" id="nombre" required placeholder="Tu nombre o el de tu fundación" class="w-full px-4 py-3 rounded-2xl bg-brandCream border-2 border-brandNude focus:border-brandSalmon focus:bg-white focus:outline-none text-sm transition-all">
+              </div>
+              <div>
+                <label for="correo" class="block text-xs font-bold text-brandDarkBrown uppercase tracking-wider mb-1">Correo Electrónico *</label>
+                <input type="email" id="correo" required placeholder="tu@correo.com" class="w-full px-4 py-3 rounded-2xl bg-brandCream border-2 border-brandNude focus:border-brandSalmon focus:bg-white focus:outline-none text-sm transition-all">
+              </div>
+            </div>
+
+            <!-- Teléfono y Paquete de Interés -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="telefono" class="block text-xs font-bold text-brandDarkBrown uppercase tracking-wider mb-1">Teléfono / WhatsApp *</label>
+                <input type="tel" id="telefono" required placeholder="Ej: 310 123 4567" class="w-full px-4 py-3 rounded-2xl bg-brandCream border-2 border-brandNude focus:border-brandSalmon focus:bg-white focus:outline-none text-sm transition-all">
+              </div>
+              <div>
+                <label for="paquete" class="block text-xs font-bold text-brandDarkBrown uppercase tracking-wider mb-1">Paquete de Interés *</label>
+                <select id="paquete" required class="w-full px-4 py-3 rounded-2xl bg-brandCream border-2 border-brandNude focus:border-brandSalmon focus:bg-white focus:outline-none text-sm transition-all font-medium text-brandDarkBrown">
+                  <option value="">Selecciona un paquete...</option>
+                  <option value="Huellas con Propósito">Huellas con Propósito (Feria Social)</option>
+                  <option value="Pasarela de Huellitas">Pasarela de Huellitas (Desfiles)</option>
+                  <option value="Gran Festival Patitas">Gran Festival Patitas (Gran Formato)</option>
+                  <option value="Navidad de Huellitas">Próximo Evento: Navidad de Huellitas</option>
+                  <option value="Personalizado">Formato Personalizado a la Medida</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Mensaje -->
+            <div>
+              <label for="mensaje" class="block text-xs font-bold text-brandDarkBrown uppercase tracking-wider mb-1">Mensaje / Detalles del Evento *</label>
+              <textarea id="mensaje" rows="4" required placeholder="Cuéntanos sobre tu refugio, número aproximado de perros, fecha tentativa o dudas sobre los servicios..." class="w-full px-4 py-3 rounded-2xl bg-brandCream border-2 border-brandNude focus:border-brandSalmon focus:bg-white focus:outline-none text-sm transition-all"></textarea>
+            </div>
+
+            <!-- Checkbox de Política -->
+            <div class="flex items-start gap-2.5 pt-1">
+              <input type="checkbox" id="aceptoPolitica" required class="mt-1 accent-brandSalmon rounded">
+              <label for="aceptoPolitica" class="text-xs text-[#6B5045]">
+                Autorizo el tratamiento de mis datos de acuerdo con los fines de contacto y cotización de Telar de Patitas en Bogotá, Colombia.
+              </label>
+            </div>
+
+            <!-- Botón Submit -->
+            <button type="submit" id="btnEnviarCotizacion" class="w-full py-4 rounded-full bg-gradient-to-r from-brandSalmon to-brandRed text-white font-fredoka font-bold text-base shadow-paw hover:shadow-paw-hover hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center gap-2 mt-4">
+              <i class="fa-solid fa-paper-plane"></i> Enviar Solicitud de Cotización
+            </button>
+
+            <!-- Feedback de envío -->
+            <div id="feedbackCotizacion" class="hidden p-4 rounded-2xl text-center text-sm font-semibold transition-all"></div>
+
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 10. FOOTER CORPORATIVO -->
+  <!-- ========================================================= -->
+  <footer class="bg-brandDarkBrown text-brandCream pt-16 pb-12 mt-20 border-t-4 border-brandSalmon">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        
+        <!-- Info Marca -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-brandBrown border border-brandPink flex items-center justify-center text-brandPink text-lg">
+              <i class="fa-solid fa-paw anim-paw"></i>
+            </div>
+            <div>
+              <span class="font-fredoka font-bold text-xl text-white block leading-tight">Telar de Patitas</span>
+              <span class="font-fredoka text-xs text-brandSalmon">¡Más que guau! ¡Wow!</span>
+            </div>
+          </div>
+          <p class="text-xs text-brandNude leading-relaxed">
+            Empresa especializada en la producción de eventos, ferias temáticas y pasarelas caninas dedicadas a refugios, fundaciones y adopción responsable.
+          </p>
+          <p class="text-xs text-brandNude">
+            <i class="fa-solid fa-location-dot text-brandSalmon mr-1.5"></i> Bogotá, Colombia
+          </p>
+        </div>
+
+        <!-- Enlaces Rápidos -->
+        <div class="space-y-3">
+          <h4 class="font-fredoka font-bold text-base text-brandPink">Navegación</h4>
+          <ul class="space-y-2 text-xs text-brandNude">
+            <li><a href="#inicio" class="hover:text-brandSalmon transition-colors">Inicio</a></li>
+            <li><a href="#nosotros" class="hover:text-brandSalmon transition-colors">Sobre Nosotros</a></li>
+            <li><a href="#esquema" class="hover:text-brandSalmon transition-colors">Cómo Trabajamos</a></li>
+            <li><a href="#paquetes" class="hover:text-brandSalmon transition-colors">Paquetes Oficiales</a></li>
+            <li><a href="#adicionales" class="hover:text-brandSalmon transition-colors">Complementos Opcionales</a></li>
+            <li><a href="#bienestar" class="hover:text-brandSalmon transition-colors">Protocolo de Bienestar</a></li>
+          </ul>
+        </div>
+
+        <!-- Paquetes Oficiales -->
+        <div class="space-y-3">
+          <h4 class="font-fredoka font-bold text-base text-brandPink">Nuestros Paquetes</h4>
+          <ul class="space-y-2 text-xs text-brandNude">
+            <li><a href="#paquetes" class="hover:text-brandSalmon transition-colors">1. Huellas con Propósito (Feria Social)</a></li>
+            <li><a href="#paquetes" class="hover:text-brandSalmon transition-colors">2. Pasarela de Huellitas (Desfiles)</a></li>
+            <li><a href="#paquetes" class="hover:text-brandSalmon transition-colors">3. Gran Festival Patitas (Gran Formato)</a></li>
+            <li><a href="#navidad" class="hover:text-brandSalmon transition-colors text-brandSalmon font-bold">🎄 Navidad de Huellitas</a></li>
+          </ul>
+        </div>
+
+        <!-- Redes Oficiales -->
+        <div class="space-y-4">
+          <h4 class="font-fredoka font-bold text-base text-brandPink">Comunidad Digital</h4>
+          <p class="text-xs text-brandNude">Síguenos en nuestras redes oficiales para ver fotos de nuestros eventos y peludos en adopción:</p>
+          <div class="flex items-center gap-3">
+            <a href="https://instagram.com/telar_de_patitas" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-9 h-9 rounded-full bg-brandBrown hover:bg-brandSalmon text-white flex items-center justify-center transition-colors">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://tiktok.com/@telar_de_patitas" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="w-9 h-9 rounded-full bg-brandBrown hover:bg-brandSalmon text-white flex items-center justify-center transition-colors">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <a href="https://facebook.com/telardepatitas" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="w-9 h-9 rounded-full bg-brandBrown hover:bg-brandSalmon text-white flex items-center justify-center transition-colors">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://www.telardepatitas.com" target="_blank" rel="noopener noreferrer" aria-label="Sitio Web" class="w-9 h-9 rounded-full bg-brandBrown hover:bg-brandSalmon text-white flex items-center justify-center transition-colors">
+              <i class="fa-solid fa-globe"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Barra inferior Copyright -->
+      <div class="pt-8 border-t border-brandBrown/60 flex flex-col sm:flex-row items-center justify-between text-xs text-brandNude gap-4">
+        <p>© 2026 Telar de Patitas. Todos los derechos reservados. ¡Más que guau! ¡Wow! — Bogotá, Colombia.</p>
+        <p class="flex items-center gap-1.5">
+          Hecho con <i class="fa-solid fa-heart text-brandSalmon anim-heart"></i> para los peludos de rescate.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================= -->
+  <!-- JAVASCRIPT DE INTERACTIVIDAD -->
+  <!-- ========================================================= -->
+  <script>
+    // Control del Menú Móvil
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      if (isOpen) {
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.remove('fa-xmark');
+        menuIcon.classList.add('fa-bars');
+      } else {
+        mobileMenu.classList.remove('hidden');
+        menuIcon.classList.remove('fa-bars');
+        menuIcon.classList.add('fa-xmark');
+      }
+    });
+
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.remove('fa-xmark');
+        menuIcon.classList.add('fa-bars');
+      });
+    });
+
+    // Función para auto-seleccionar el paquete desde las tarjetas y viajar al formulario
+    function seleccionarPaquete(nombrePaquete) {
+      const selectElement = document.getElementById('paquete');
+      if (selectElement) {
+        selectElement.value = nombrePaquete;
+      }
+      
+      const seccionContacto = document.getElementById('contacto');
+      if (seccionContacto) {
+        seccionContacto.scrollIntoView({ behavior: 'smooth' });
+      }
+
+      // Efecto visual momentáneo en el selector
+      setTimeout(() => {
+        selectElement.classList.add('ring-4', 'ring-brandSalmon');
+        setTimeout(() => {
+          selectElement.classList.remove('ring-4', 'ring-brandSalmon');
+        }, 1500);
+      }, 700);
+    }
+
+    // Procesamiento del Formulario de Cotización
+    function procesarEnvioCotizacion(event) {
+      event.preventDefault();
+
+      const btn = document.getElementById('btnEnviarCotizacion');
+      const feedback = document.getElementById('feedbackCotizacion');
+      const nombre = document.getElementById('nombre').value.trim();
+      const paquete = document.getElementById('paquete').value;
+
+      // Estado de carga
+      btn.disabled = true;
+      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Procesando tu cotización...';
+      feedback.classList.add('hidden');
+
+      setTimeout(() => {
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Enviar Solicitud de Cotización';
+
+        feedback.className = 'p-4 rounded-2xl text-center text-sm font-semibold bg-[#E8F5E9] text-[#2E7D32] border border-[#A5D6A7] block mt-4 animate-fade-in';
+        feedback.innerHTML = `
+          <div class="flex items-center justify-center gap-2 mb-1">
+            <i class="fa-solid fa-circle-check text-lg"></i>
+            <span class="font-fredoka font-bold text-base">¡Solicitud recibida con éxito!</span>
+          </div>
+          <p class="text-xs font-normal">
+            Gracias <strong>${nombre}</strong>. Nos comunicaremos contigo para coordinar la propuesta formal de <strong>"${paquete}"</strong> y la asesoría bajo nuestro esquema del 50/50.
+          </p>
+        `;
+
+        document.getElementById('cotizacionForm').reset();
+      }, 900);
+    }
+  </script>
+</body>
+</html>
